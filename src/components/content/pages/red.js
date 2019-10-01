@@ -13,7 +13,7 @@ class Red extends Component {
             </h3>
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
-                <li className="breadcrumb-item"><a href="#">UI Elements</a></li>
+                <li className="breadcrumb-item"><NavLink to="#">UI Elements</NavLink></li>
                 <li className="breadcrumb-item active" aria-current="page">Buttons</li>
               </ol>
             </nav>
@@ -287,9 +287,9 @@ class Red extends Component {
                           <div className="btn-group">
                             <button type="button" className="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">Dropdown</button>
                             <div className="dropdown-menu">
-                              <a className="dropdown-item">Go back</a>
-                              <a className="dropdown-item">Delete</a>
-                              <a className="dropdown-item">Swap</a>
+                              <NavLink to="/" className="dropdown-item">Go back</NavLink>
+                              <NavLink to="/" className="dropdown-item">Delete</NavLink>
+                              <NavLink to="/" className="dropdown-item">Swap</NavLink>
                             </div>
                           </div>
                           <button type="button" className="btn btn-outline-secondary">Default</button>

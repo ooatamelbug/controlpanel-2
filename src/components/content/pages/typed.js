@@ -1,4 +1,5 @@
 import React ,{Component} from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default class Typed extends Component {
   render(){
@@ -11,7 +12,7 @@ export default class Typed extends Component {
             </h3>
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
-                <li className="breadcrumb-item"><a href="#">UI Elements</a></li>
+                <li className="breadcrumb-item"><NavLink to="#">UI Elements</NavLink></li>
                 <li className="breadcrumb-item active" aria-current="page">Typography</li>
               </ol>
             </nav>

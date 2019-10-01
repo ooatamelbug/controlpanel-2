@@ -1,9 +1,18 @@
 import React,{Component} from 'react';
-let logo1 = require("../../../logo.svg");
+// import { GeoChart  } from 'react-chartkick';
 // import { NavLink } from 'react-router-dom';
-
+import {ColumnChart , PieChart } from 'react-chartkick';
+import 'chart.js';
+let logo1 = require("../../../logo.svg");
 class Content extends Component {
-  
+  constructor(props){
+    super(props);
+    this.state = {
+      line2: [["Germany",4],["Brazil",50],["Egypt",20]],
+      line3: [["Blueberry",4],["Blueberry",50],["Strawberry",20]]
+    };
+  }
+
   render(){
     return (
              <div className="content-wrapper">
@@ -17,8 +26,6 @@ class Content extends Component {
                  <nav aria-label="breadcrumb">
                    <ul className="breadcrumb">
                      <li className="breadcrumb-item active" aria-current="page">
-                       <span></span>Overview
-                       <i className="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
                      </li>
                    </ul>
                  </nav>
@@ -27,7 +34,7 @@ class Content extends Component {
                  <div className="col-md-4 stretch-card grid-margin">
                    <div className="card bg-gradient-danger card-img-holder text-white">
                      <div className="card-body">
-                       <img src="images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image"/>
+                       <img src="images/dashboard/circle.svg" className="card-img-absolute" alt=""/>
                        <h4 className="font-weight-normal mb-3">Weekly Sales
                          <i className="mdi mdi-chart-line mdi-24px float-right"></i>
                        </h4>
@@ -39,7 +46,7 @@ class Content extends Component {
                  <div className="col-md-4 stretch-card grid-margin">
                    <div className="card bg-gradient-info card-img-holder text-white">
                      <div className="card-body">
-                       <img src="images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image"/>
+                       <img src="images/dashboard/circle.svg" className="card-img-absolute" alt=""/>
                        <h4 className="font-weight-normal mb-3">Weekly Orders
                          <i className="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                        </h4>
@@ -51,7 +58,7 @@ class Content extends Component {
                  <div className="col-md-4 stretch-card grid-margin">
                    <div className="card bg-gradient-success card-img-holder text-white">
                      <div className="card-body">
-                       <img src="images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image"/>
+                       <img src="images/dashboard/circle.svg" className="card-img-absolute" alt=""/>
                        <h4 className="font-weight-normal mb-3">Visitors Online
                          <i className="mdi mdi-diamond mdi-24px float-right"></i>
                        </h4>
@@ -68,8 +75,8 @@ class Content extends Component {
                        <div className="clearfix">
                          <h4 className="card-title float-left">Visit And Sales Statistics</h4>
                          <div id="visit-sale-chart-legend" className="rounded-legend legend-horizontal legend-top-right float-right"></div>
+                         <ColumnChart data={this.state.line2} />
                        </div>
-                       <canvas id="visit-sale-chart" className="mt-4"></canvas>
                      </div>
                    </div>
                  </div>
@@ -77,7 +84,7 @@ class Content extends Component {
                    <div className="card">
                      <div className="card-body">
                        <h4 className="card-title">Traffic Sources</h4>
-                       <canvas id="traffic-chart"></canvas>
+                       <PieChart data={this.state.line3} />
                        <div id="traffic-chart-legend" className="rounded-legend legend-vertical legend-bottom-left pt-4"></div>
                      </div>
                    </div>
@@ -112,7 +119,7 @@ class Content extends Component {
                            <tbody>
                              <tr>
                                <td>
-                                 <img src={logo1} className="mr-2" alt="image"/>
+                                 <img src={logo1} className="mr-2" alt=""/>
                                  David Grey
                                </td>
                                <td>
@@ -130,7 +137,7 @@ class Content extends Component {
                              </tr>
                              <tr>
                                <td>
-                                 <img src={logo1} className="mr-2" alt="image"/>
+                                 <img src={logo1} className="mr-2" alt=""/>
                                  Stella Johnson
                                </td>
                                <td>
@@ -148,7 +155,7 @@ class Content extends Component {
                              </tr>
                              <tr>
                                <td>
-                                 <img src={logo1} className="mr-2" alt="image"/>
+                                 <img src={logo1} className="mr-2" alt=""/>
                                  Marina Michel
                                </td>
                                <td>
@@ -166,7 +173,7 @@ class Content extends Component {
                              </tr>
                              <tr>
                                <td>
-                                 <img src={logo1} className="mr-2" alt="image"/>
+                                 <img src={logo1} className="mr-2" alt=""/>
                                  John Doe
                                </td>
                                <td>
@@ -206,16 +213,16 @@ class Content extends Component {
                        </div>
                        <div className="row mt-3">
                          <div className="col-6 pr-1">
-                           <img src="images/dashboard/img_1.jpg" className="mb-2 mw-100 w-100 rounded" alt="image"/>
-                           <img src="images/dashboard/img_4.jpg" className="mw-100 w-100 rounded" alt="image"/>
+                           <img src="images/dashboard/img_1.jpg" className="mb-2 mw-100 w-100 rounded" alt=""/>
+                           <img src="images/dashboard/img_4.jpg" className="mw-100 w-100 rounded" alt=""/>
                          </div>
                          <div className="col-6 pl-1">
-                           <img src="images/dashboard/img_2.jpg" className="mb-2 mw-100 w-100 rounded" alt="image"/>
-                           <img src="images/dashboard/img_3.jpg" className="mw-100 w-100 rounded" alt="image"/>
+                           <img src="images/dashboard/img_2.jpg" className="mb-2 mw-100 w-100 rounded" alt=""/>
+                           <img src="images/dashboard/img_3.jpg" className="mw-100 w-100 rounded" alt=""/>
                          </div>
                        </div>
                        <div className="d-flex mt-5 align-items-top">
-                         <img src={logo1} className="img-sm rounded-circle mr-3" alt="image"/>
+                         <img src={logo1} className="img-sm rounded-circle mr-3" alt=""/>
                          <div className="mb-0 flex-grow">
                            <h5 className="mr-2 mb-2">School Website - Authentication Module.</h5>
                            <p className="mb-0 font-weight-light">It is a long established fact that a reader will be distracted by the readable

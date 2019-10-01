@@ -40,44 +40,28 @@ class MainSide extends Component {
             </div>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="pages/icons/mdi.html">
+            <NavLink className="nav-link" to="/icons">
               <span className="menu-title">Icons</span>
               <i className="mdi mdi-contacts menu-icon"></i>
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="pages/forms/basic_elements.html">
+            <NavLink className="nav-link" to="/f">
               <span className="menu-title">Forms</span>
               <i className="mdi mdi-format-list-bulleted menu-icon"></i>
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/">
+            <NavLink className="nav-link" to="/chartd">
               <span className="menu-title">Charts</span>
               <i className="mdi mdi-chart-bar menu-icon"></i>
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/b">
+            <NavLink className="nav-link" to="/bsdf">
               <span className="menu-title">Tables</span>
               <i className="mdi mdi-table-large menu-icon"></i>
             </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" data-toggle="collapse" to="#general-pages" aria-expanded="false" aria-controls="general-pages">
-              <span className="menu-title">Sample Pages</span>
-              <i className="menu-arrow"></i>
-              <i className="mdi mdi-medical-bag menu-icon"></i>
-            </NavLink>
-            <div className="collapse" id="general-pages">
-              <ul className="nav flex-column sub-menu">
-                <li className="nav-item"> <NavLink className="nav-link" to="/"> Blank Page </NavLink></li>
-                <li className="nav-item"> <NavLink className="nav-link" to="/"> Login </NavLink></li>
-                <li className="nav-item"> <NavLink className="nav-link" to="/"> Register </NavLink></li>
-                <li className="nav-item"> <NavLink className="nav-link" to="/"> 404 </NavLink></li>
-                <li className="nav-item"> <NavLink className="nav-link" to="/"> 500 </NavLink></li>
-              </ul>
-              </div>
           </li>
           <li className="nav-item sidebar-actions">
             <span className="nav-link">
@@ -85,16 +69,7 @@ class MainSide extends Component {
                 <h6 className="font-weight-normal mb-3">Projects</h6>
               </div>
               <button className="btn btn-block btn-lg btn-gradient-primary mt-4">+ Add a project</button>
-              <div className="mt-4">
-                <div className="border-bottom">
-                  <p className="text-secondary">Categories</p>
-                </div>
-                <ul className="gradient-bullet-list mt-4">
-                  <li>Free</li>
-                  <li>Pro</li>
-                </ul>
-              </div>
-            </span>
+              </span>
           </li>
         </ul>
       </nav>

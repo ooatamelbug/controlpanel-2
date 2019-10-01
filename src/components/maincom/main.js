@@ -1,9 +1,10 @@
 import React,{Component} from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink,Redirect } from 'react-router-dom';
 let logo1 = require("../../logo.svg");
 
-class Main extends Component {
-  render(){
+function Main (props) {
+  
+  
     return (
       // <!-- partial:partials/_navbar.html -->
    <nav className="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -26,11 +27,11 @@ class Main extends Component {
          <li className="nav-item nav-profile dropdown">
            <NavLink className="nav-link dropdown-toggle" id="profileDropdown" to="/" data-toggle="dropdown" aria-expanded="false">
              <div className="nav-profile-img">
-               <img src={logo1} alt="image"/>
+               <img src={logo1} alt=""/>
                <span className="availability-status online"></span>
              </div>
              <div className="nav-profile-text">
-               <p className="mb-1 text-black">David Greymaax</p>
+               <p className="mb-1 text-black">{props.user.user.name}</p>
              </div>
            </NavLink>
            <div className="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
@@ -39,10 +40,11 @@ class Main extends Component {
                Activity Log
              </NavLink>
              <div className="dropdown-divider"></div>
-             <NavLink className="dropdown-item" to="/">
+             <button className="dropdown-item" onClick={props.logOutFun}>
+             {/* <button className="dropdown-item" > */}
                <i className="mdi mdi-logout mr-2 text-primary"></i>
                Signout
-             </NavLink>
+             </button>
            </div>
          </li>
          <li className="nav-item d-none d-lg-block full-screen-link">
@@ -60,7 +62,7 @@ class Main extends Component {
              <div className="dropdown-divider"></div>
              <NavLink  to="" className="dropdown-item preview-item">
                <div className="preview-thumbnail">
-                   <img src={logo1} alt="image" className="profile-pic"/>
+                   <img src={logo1} alt="" className="profile-pic"/>
                </div>
                <div className="preview-item-content d-flex align-items-start flex-column justify-content-center">
                  <h6 className="preview-subject ellipsis mb-1 font-weight-normal">Mark send you a message</h6>
@@ -72,7 +74,7 @@ class Main extends Component {
              <div className="dropdown-divider"></div>
              <NavLink to="" className="dropdown-item preview-item">
                <div className="preview-thumbnail">
-                   <img src={logo1} alt="image" className="profile-pic"/>
+                   <img src={logo1} alt="" className="profile-pic"/>
                </div>
                <div className="preview-item-content d-flex align-items-start flex-column justify-content-center">
                  <h6 className="preview-subject ellipsis mb-1 font-weight-normal">Cregh send you a message</h6>
@@ -84,7 +86,7 @@ class Main extends Component {
              <div className="dropdown-divider"></div>
              <NavLink  to=""className="dropdown-item preview-item">
                <div className="preview-thumbnail">
-                   <img src={logo1} alt="image" className="profile-pic"/>
+                   <img src={logo1} alt="" className="profile-pic"/>
                </div>
                <div className="preview-item-content d-flex align-items-start flex-column justify-content-center">
                  <h6 className="preview-subject ellipsis mb-1 font-weight-normal">Profile picture updated</h6>
@@ -168,7 +170,6 @@ class Main extends Component {
    </nav>
 
     )
-  }
 }
 
 export default Main;

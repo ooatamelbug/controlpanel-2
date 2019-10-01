@@ -4,12 +4,14 @@ let logo1 = require("../../../logo.svg");
 
 class Content2 extends Component {
   render(){
+
+
     return (
 
               <div className="content-wrapper">
                 <div className="page-header">
                   <h3 className="page-title">
-                    Basic Tables
+                    Basic Tables       
                   </h3>
                   <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
